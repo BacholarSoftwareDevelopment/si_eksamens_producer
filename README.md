@@ -1,5 +1,8 @@
 ### Message Broker
 
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/75f1c46ef1846c32d411)
+
+
 **How to start Docker**
 
 How to create this demo application:

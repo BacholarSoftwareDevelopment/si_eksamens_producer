@@ -6,18 +6,18 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.TopicBuilder;
 
-//@Configuration
+@Configuration
 public class TopicConfiguration
 {
-//      @Value("${spring.kafka.producer.topic}")
-//      String topic;
-//
-//      @Bean
-//      public NewTopic topicExample()
-//      {
-//            return TopicBuilder.name(topic)
-//                    .partitions(3)
-//                    .replicas(1)
-//                    .build();
-//      }
+      @Value("${spring.kafka.producer.topic}")
+      String topic;
+
+      @Bean
+      public NewTopic topicFactory()
+      {
+            return TopicBuilder.name(topic)
+                    .partitions(3)
+                    .replicas(1)
+                    .build();
+      }
 }
