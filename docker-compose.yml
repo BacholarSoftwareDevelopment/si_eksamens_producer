@@ -38,5 +38,5 @@ services:
     image: confluentinc/cp-kafka:5.4.0
     hostname: kafka
     container_name: kafka
-    command: ["tail", "-f", "/dev/null"]
+    command: [ "tail", "-f", "/dev/null" ]
     network_mode: "host"

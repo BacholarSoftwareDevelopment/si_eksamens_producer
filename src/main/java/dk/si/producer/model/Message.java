@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Message {
     private Long id;
+    private String topic;
     private String name;
     private String city;
     private String message;
-
 }

@@ -11,25 +11,39 @@ import org.springframework.stereotype.Service;
 @Service
 public class ProducerService {
 
-    @Value("${spring.kafka.producer.topic}")
-    String topic;
     private static Logger logger = LoggerFactory.getLogger(ProducerService.class);
+
 
     @Autowired
     private KafkaTemplate<String, Object> template;
 
-    public void sendObject(Message message)
-    {
-        template.send(topic, new Message(
+    public void sendObject(Message message) {
+        template.send(message.getTopic(), new Message(
                 message.getId(),
+                message.getTopic(),
                 message.getName(),
                 message.getCity(),
                 message.getMessage()));
         logger.info("### Producer sends customer [{}:{}:{}:{}:{}]",
                 message.getId(),
+                message.getTopic(),
                 message.getName(),
                 message.getCity(),
                 message.getMessage());
         template.flush();
     }
+
+    public boolean isHotel(Message message){
+        return message.getTopic().equals("HOTEL");
+    }
+
+    public boolean isTourism(Message message){
+        return message.getTopic().equals("TOURISM");
+    }
+
+    public boolean isAriport(Message message){
+        return message.getTopic().equals("AIRPORT");
+    }
+
 }
+
