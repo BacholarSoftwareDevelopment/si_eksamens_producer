@@ -4,7 +4,6 @@ import dk.si.producer.model.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -33,17 +32,16 @@ public class ProducerService {
         template.flush();
     }
 
-    public boolean isHotel(Message message){
-        return message.getTopic().equals("HOTEL");
-    }
-
-    public boolean isTourism(Message message){
-        return message.getTopic().equals("TOURISM");
-    }
-
-    public boolean isAriport(Message message){
-        return message.getTopic().equals("AIRPORT");
-    }
-
+//    public boolean isHotel(Message message){
+//        return message.getTopic().equals("HOTEL");
+//    }
+//
+//    public boolean isTourism(Message message){
+//        return message.getTopic().equals("TOURISM");
+//    }
+//
+//    public boolean isAriport(Message message){
+//        return message.getTopic().equals("AIRPORT");
+//    }
 }
 
