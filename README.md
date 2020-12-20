@@ -8,10 +8,15 @@ A Kafka producer is an application that can act as a source of data in a Kafka c
 
 9003
 
+**Type**
+
+Message-Broker
+
 **Technology:**
 
 Kafka
 
+* * *
 
 **How to start Docker**
 
