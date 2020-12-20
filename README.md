@@ -6,7 +6,7 @@ A Kafka producer is an application that can act as a source of data in a Kafka c
 
 **Port**
 
-9001
+9003
 
 **Technology:**
 
