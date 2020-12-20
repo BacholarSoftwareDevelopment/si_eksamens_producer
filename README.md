@@ -1,6 +1,17 @@
-### Message Broker
+### Producer
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/75f1c46ef1846c32d411)
+**Explained**
+
+A Kafka producer is an application that can act as a source of data in a Kafka cluster. A producer can publish messages to one or more Kafka topics.
+
+**Port**
+
+9001
+
+**Technology:**
+
+Kafka
+
 
 **How to start Docker**
 
